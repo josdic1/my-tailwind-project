@@ -160,7 +160,7 @@
       "type": "storage",
       "description": "File Storage",
       "paid": true,
-      "starred": true
+      "starred": false
     },
     {
       "id": "215a",
@@ -214,7 +214,7 @@
       "type": "code",
       "description": "Flatiron School Canvas",
       "paid": false,
-      "starred": false
+      "starred": true
     },
     {
       "id": "4f96",
@@ -438,6 +438,24 @@
       "url": "https://drive.google.com/drive/folders/1PO5v-Q3tP5oLS8CU8Dv0PS3-16b4QNcU?usp=sharing",
       "type": "ai",
       "description": "Folder with prompts, lyrics, and ideas",
+      "paid": false,
+      "starred": false
+    },
+    {
+      "id": "84d2",
+      "title": "DixonList",
+      "url": "https://dixonlist.vercel.app/",
+      "type": "storage",
+      "description": "Todo app with Dorrie",
+      "paid": false,
+      "starred": true
+    },
+    {
+      "id": "5687",
+      "title": "Soundcloud Downloader",
+      "url": "https://sclouddownloader.net/",
+      "type": "music",
+      "description": "Download SC link to mp3",
       "paid": false,
       "starred": false
     }
