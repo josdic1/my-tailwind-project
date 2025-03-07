@@ -80,8 +80,13 @@ const init = () => {
         <label for="inputType" class="block mb-2 text-sm font-bold text-gray-700">Type</label>
         <select id="inputType" class="shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="type">
           <option value="all" selected disabled>Choose type...</option>
+          <option value="ai">AI</option>
           <option value="code">Code</option>
+          <option value="email">Email</option>
           <option value="music">Music</option>
+              <option value="settings">Settings</option>
+          <option value="social">Social</option>
+          <option value="storage">Storage</option>
         </select>
 
         <label for="inputDescription" class="block mb-2 text-sm font-bold text-gray-700">Description</label>
@@ -93,8 +98,9 @@ const init = () => {
         </div>
 
         <div class="mt-4 flex justify-between">
+        <button type="button" id="buttonClear" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Clear Form</button>
           <button type="submit" id="buttonSubmit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
-          <button type="button" id="buttonClear" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Clear Form</button>
+    
         </div>
         <button type="button" id="hideForm" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-4 w-full">Hide Form</button>
       </div>
