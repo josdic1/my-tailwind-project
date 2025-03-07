@@ -22,6 +22,7 @@ const init = () => {
     type: "",
     description: "",
     paid: false,
+    starred: false
   };
   let selectedLink = {
     id: "",
@@ -30,11 +31,13 @@ const init = () => {
     type: "",
     description: "",
     paid: false,
+    starred: false
   };
   let filterObj = {
     title: '',
     type: 'all',
     paid: 'all',
+    starred: false
   };
   let starred = false;
 
@@ -245,9 +248,9 @@ const init = () => {
       <tr class="border-b border-gray-200 hover:bg-gray-50">
         <td>
   ${link.starred ?
-        `<button type='button' data-id="${link.id}" class='star-button-yes'>★</button>`
+        `<button type='button' data-id="${link.id}" class='starred'>★</button>`
         :
-        `<button type='button' data-id="${link.id}" class='star-button-no'>☆</button>`
+        `<button type='button' data-id="${link.id}" class='unstarred'>☆</button>`
       }
 </td>
         <td class="py-2 px-4 text-sm">${link.title || ''}</td>
@@ -290,15 +293,30 @@ const init = () => {
       btn.addEventListener('click', handleListButtonClick);
     });
 
-    document.querySelectorAll('.form-button-star').forEach(btn => {
+    document.querySelectorAll('.starred').forEach(btn => {
+      btn.addEventListener('click', handleStar)
+    })
+
+    document.querySelectorAll('.unstarred').forEach(btn => {
       btn.addEventListener('click', handleStar)
     })
   }
 
 
   function handleStar(e) {
+    let starId = e.target.dataset.id
+    let starObj = links.find(link => link.id === starId)
+    selectedLink = starObj
 
+    selectedLink = {
+      ...selectedLink,
+      starred: !starObj.starred
+    }
+    let updatedObj = selectedLink
+
+    handleUpdatedLink(updatedObj)
   }
+
 
   // List button handler
   function handleListButtonClick(e) {
@@ -351,20 +369,23 @@ const init = () => {
       if (!r.ok) throw new Error('GET: bad request');
       const data = await r.json();
       links = data;
-      renderList(data);
+
+      // Sort links: first by starred (starred first), then alphabetically by title
+      links.sort((a, b) => {
+        if (a.starred === b.starred) {
+          return a.title.localeCompare(b.title);  // If same starred status, sort alphabetically
+        }
+        return a.starred ? -1 : 1;  // Starred items come first
+      });
+
+      renderList(links);  // Now renders the sorted list
       renderForm();
       renderFilter();
     } catch (error) {
-      console.error('Fetch error:', error);
-      // Mock data for testing without backend
-      links = [
-        { id: '1', title: 'Example', url: 'https://example.com', type: 'code', description: 'Test link', paid: false }
-      ];
-      renderList(links);
-      renderForm();
-      renderFilter();
+      console.error('GET error:', error);
     }
   }
+
 
   async function handleNewLink(newObj) {
     try {

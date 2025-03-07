@@ -3,28 +3,30 @@
 @tailwind utilities;
 
 /* Filled Star */
-.star-button-yes {
-  font-size: 20px;
-  color: #87afad; /* Bright yellow/gold */
+.unstarred {
+  font-size: 22px;
   border: none;
   background: none;
   cursor: pointer;
-  opacity: .8;
-  transition: color 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  color: rgba(0, 0, 0, 0.3); /* Light gray */
+  opacity: 0.3;
 }
 
-/* Outlined Star (Unstarred) */
-.star-button-no {
-  font-size: 20px;
-  color: rgba(0, 0, 0, 0.3); /* Light gray for a faded effect */
+.starred { /* ✅ Correct, using a class */
+  font-size: 22px;
   border: none;
   background: none;
   cursor: pointer;
-  opacity: .3;
-  transition: color 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  color: #87afad; /* Custom color */
+  opacity: 0.8;
+
 }
 
-/* Hover effect to make unstarred stars more visible */
-.star-button-no:hover {
-  color: rgba(0, 0, 0, 0.6);
+
+
+.unstarred:hover {
+  opacity: 0.6; /* Darker on hover */
 }
+
