@@ -2,3 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Filled Star */
+.star-button-yes {
+  font-size: 20px;
+  color: #87afad; /* Bright yellow/gold */
+  border: none;
+  background: none;
+  cursor: pointer;
+  opacity: .8;
+  transition: color 0.2s ease-in-out;
+}
+
+/* Outlined Star (Unstarred) */
+.star-button-no {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.3); /* Light gray for a faded effect */
+  border: none;
+  background: none;
+  cursor: pointer;
+  opacity: .3;
+  transition: color 0.2s ease-in-out;
+}
+
+/* Hover effect to make unstarred stars more visible */
+.star-button-no:hover {
+  color: rgba(0, 0, 0, 0.6);
+}

@@ -1,116 +1,116 @@
 {
   "links": [
     {
-      "title": "suno",
+      "title": "Suno",
       "url": "https://suno.com/create",
       "type": "music",
+      "description": "AI music generator using text prompts.",
       "paid": true,
-      "id": "46cd",
-      "description": "AI music generator using text prompts"
+      "starred": true
     },
     {
-      "title": "udio",
+      "title": "Udio",
       "url": "https://www.udio.com/my-creations",
       "type": "music",
+      "description": "AI music generator using text prompts.",
       "paid": false,
-      "id": "75f0",
-      "description": "AI music generator using text prompts"
+      "starred": false
     },
     {
-      "title": "excalidraw",
+      "title": "Excalidraw",
       "url": "https://excalidraw.com/",
       "type": "code",
+      "description": "Wireframe hand-drawn style diagramming tool.",
       "paid": false,
-      "id": "3df5",
-      "description": "Wireframe hand-drawn style diagramming tool"
+      "starred": false
     },
     {
-      "id": "b4a3",
-      "title": "vite+",
+      "title": "Vite+",
       "url": "http://localhost:5173",
       "type": "code",
-      "description": "default development server address for Vite",
-      "paid": false
+      "description": "Default development server address for Vite.",
+      "paid": false,
+      "starred": true
     },
     {
-      "id": "8701",
-      "title": "musicfy",
+      "title": "Musicfy",
       "url": "https://create.musicfy.lol/",
       "type": "music",
-      "description": "AI voice changer and stem-splitter",
-      "paid": true
+      "description": "AI voice changer and stem-splitter.",
+      "paid": true,
+      "starred": false
     },
     {
-      "id": "38f2",
-      "title": "tube ripper",
+      "title": "Tube Ripper",
       "url": "https://tuberipper.com/32/",
       "type": "music",
-      "description": "Download audio from video streams",
-      "paid": false
+      "description": "Download audio from video streams.",
+      "paid": false,
+      "starred": false
     },
     {
-      "id": "4202",
-      "title": "sora",
+      "title": "Sora",
       "url": "https://sora.com/library",
       "type": "video",
-      "description": "AI video generation using text prompt",
-      "paid": false
+      "description": "AI video generation using text prompts.",
+      "paid": false,
+      "starred": false
     },
     {
-      "id": "3616",
-      "title": "github",
+      "title": "GitHub",
       "url": "https://github.com/",
       "type": "code",
-      "description": "Git repository",
-      "paid": false
+      "description": "Git repository hosting service.",
+      "paid": false,
+      "starred": true
     },
     {
-      "id": "1cc9",
-      "title": "railway",
+      "title": "Railway",
       "url": "https://railway.com/dashboard",
       "type": "code",
-      "description": "Persists JSON data on hosted site",
-      "paid": false
+      "description": "Persists JSON data on a hosted site.",
+      "paid": false,
+      "starred": false
     },
     {
-      "id": "9f96",
-      "title": "render",
+      "title": "Render",
       "url": "https://dashboard.render.com/",
       "type": "code",
-      "description": "Backend hosting for app",
-      "paid": false
+      "description": "Backend hosting for applications.",
+      "paid": false,
+      "starred": false
     },
     {
-      "id": "2d86",
-      "title": "supabase",
+      "title": "Supabase",
       "url": "https://supabase.com/dashboard/projects",
       "type": "code",
-      "description": "Backend hosting for app",
-      "paid": false
+      "description": "Backend hosting for applications.",
+      "paid": false,
+      "starred": false
     },
     {
-      "id": "5957",
-      "title": "vercel",
+      "title": "Vercel",
       "url": "https://vercel.com/joshs-projects-933203af",
       "type": "code",
-      "description": "Frontend hosting",
-      "paid": false
+      "description": "Frontend hosting for web applications.",
+      "paid": false,
+      "starred": false
     },
     {
-      "id": "662f",
-      "title": "svg creator",
+      "title": "SVG Creator",
       "url": "https://editsvgcode.com/",
       "type": "code",
-      "description": "Creates xml code of image svg",
-      "paid": false
+      "description": "Creates XML code for SVG images.",
+      "paid": false,
+      "starred": false
     },
     {
-      "id": "92ab",
-      "title": "splice",
+      "title": "Splice",
       "url": "https://splice.com/home",
       "type": "music",
-      "description": "Loop, samples, and instrumental database",
-      "paid": true
+      "description": "Loop, sample, and instrumental database.",
+      "paid": true,
+      "starred": false
     }
   ]
 }

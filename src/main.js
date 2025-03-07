@@ -36,6 +36,7 @@ const init = () => {
     type: 'all',
     paid: 'all',
   };
+  let starred = false;
 
   // Render header with "Show Form" button
   header.innerHTML = `
@@ -242,7 +243,13 @@ const init = () => {
   function renderList(data) {
     const linkList = data.map(link => `
       <tr class="border-b border-gray-200 hover:bg-gray-50">
-        <td class="py-2 px-4 text-sm text-gray-500">${link.id || 'N/A'}</td>
+        <td>
+  ${link.starred ?
+        `<button type='button' data-id="${link.id}" class='star-button-yes'>★</button>`
+        :
+        `<button type='button' data-id="${link.id}" class='star-button-no'>☆</button>`
+      }
+</td>
         <td class="py-2 px-4 text-sm">${link.title || ''}</td>
         <td class="py-2 px-4 text-sm text-gray-500">${link.type || ''}</td>
         <td class="py-2 px-4 text-sm text-gray-500">${link.description || ''}</td>
@@ -256,7 +263,6 @@ const init = () => {
         <td class="py-2 px-4">
           <button type="button" data-id="${link.id}" data-name="del" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded text-xs">Del</button>
         </td>
-        <td class="py-2 px-4 text-sm text-red-500">${link.url === "" ? "🚫 URL" : ""} ${link.id === "" ? "🚫 ID" : ""}</td>
       </tr>
     `).join('');
 
@@ -265,7 +271,7 @@ const init = () => {
         <table class="min-w-full divide-y divide-gray-200">
           <thead class="bg-gray-50">
             <tr>
-              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">★</th>
               <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
               <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
               <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
@@ -273,7 +279,6 @@ const init = () => {
               <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">View</th>
               <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Edit</th>
               <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Delete</th>
-              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">⚠</th>
             </tr>
           </thead>
           <tbody class="bg-white divide-y divide-gray-200">${linkList}</tbody>
@@ -284,6 +289,15 @@ const init = () => {
     document.querySelectorAll('#list button').forEach(btn => {
       btn.addEventListener('click', handleListButtonClick);
     });
+
+    document.querySelectorAll('.form-button-star').forEach(btn => {
+      btn.addEventListener('click', handleStar)
+    })
+  }
+
+
+  function handleStar(e) {
+
   }
 
   // List button handler
