@@ -167,8 +167,13 @@ const init = () => {
         <input type='text' id='filterTitle' name='title' class='shadow-sm appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' placeholder='Filter by text...' />
         <select id='filterSelectType' name='type' class='shadow-sm appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'>
           <option value='all' selected>Show all (types)...</option>
+          <option value='ai'>AI</option>
           <option value='code'>Code</option>
-          <option value='music'>Music</option>
+            <option value='email'>Email</option>
+               <option value='music'>Music</option>
+               <option value='settings'>Settings</option>
+               <option value='social'>Social</option>
+          <option value='storage'>Storage</option>
         </select>
         <select id='filterSelectPaid' name='paid' class='shadow-sm appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'>
           <option value='all' selected>Show all (paid)...</option>
@@ -251,21 +256,20 @@ const init = () => {
   // Render list
   function renderList(data) {
     const linkList = data.map(link => `
-      <tr class="border-b border-gray-200 hover:bg-gray-50">
+      <tr class="border-b border-gray-200 hover:bg-gray-50 ${link.starred ? 'starred-row' : ''}">
         <td>
-  ${link.starred ?
-        `<button type='button' data-id="${link.id}" class='starred'>★</button>`
-        :
+          ${link.starred ?
+        `<button type='button' data-id="${link.id}" class='starred'>★</button>` :
         `<button type='button' data-id="${link.id}" class='unstarred'>☆</button>`
       }
-</td>
+        </td>
         <td class="py-2 px-4 text-sm">${link.title || ''}</td>
+                <td class="py-2 px-4">
+          <button type="button" data-id="${link.id}" data-name="view" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded text-xs">View</button>
+        </td>
         <td class="py-2 px-4 text-sm text-gray-500">${link.type || ''}</td>
         <td class="py-2 px-4 text-sm text-gray-500">${link.description || ''}</td>
         <td class="py-2 px-4 text-sm text-gray-500">${link.paid ? "paid" : "free"}</td>
-        <td class="py-2 px-4">
-          <button type="button" data-id="${link.id}" data-name="view" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded text-xs">View</button>
-        </td>
         <td class="py-2 px-4">
           <button type="button" data-id="${link.id}" data-name="edit" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-1 px-2 rounded text-xs">Edit</button>
         </td>
@@ -282,10 +286,10 @@ const init = () => {
             <tr>
               <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">★</th>
               <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
+               <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">View</th>
               <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
               <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
               <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">$</th>
-              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">View</th>
               <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Edit</th>
               <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Delete</th>
             </tr>
@@ -300,13 +304,14 @@ const init = () => {
     });
 
     document.querySelectorAll('.starred').forEach(btn => {
-      btn.addEventListener('click', handleStar)
-    })
+      btn.addEventListener('click', handleStar);
+    });
 
     document.querySelectorAll('.unstarred').forEach(btn => {
-      btn.addEventListener('click', handleStar)
-    })
+      btn.addEventListener('click', handleStar);
+    });
   }
+
 
 
   function handleStar(e) {
@@ -366,6 +371,10 @@ const init = () => {
     document.getElementById('inputType').value = obj.type || 'all';
     document.getElementById('inputDescription').value = obj.description || '';
     document.getElementById('inputPaid').checked = obj.paid || false;
+
+    form.style.display = 'block';
+    showFormButton.style.display = 'none';
+    document.getElementById('inputTitle').focus();
   }
 
   // Async functions

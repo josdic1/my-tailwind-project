@@ -24,7 +24,7 @@
       "type": "code",
       "description": "Wireframe hand-drawn style diagramming tool.",
       "paid": false,
-      "starred": false,
+      "starred": true,
       "id": "0550"
     },
     {
@@ -33,7 +33,7 @@
       "type": "code",
       "description": "Default development server address for Vite.",
       "paid": false,
-      "starred": false,
+      "starred": true,
       "id": "7fc0"
     },
     {
@@ -69,7 +69,7 @@
       "type": "code",
       "description": "Git repository hosting service.",
       "paid": false,
-      "starred": false,
+      "starred": true,
       "id": "9737"
     },
     {
@@ -87,7 +87,7 @@
       "type": "code",
       "description": "Backend hosting for applications.",
       "paid": false,
-      "starred": false,
+      "starred": true,
       "id": "5a32"
     },
     {
@@ -105,7 +105,7 @@
       "type": "code",
       "description": "Frontend hosting for web applications.",
       "paid": false,
-      "starred": false,
+      "starred": true,
       "id": "488b"
     },
     {
@@ -159,7 +159,7 @@
       "url": "https://www.dropbox.com/home",
       "type": "storage",
       "description": "File Storage",
-      "paid": true,
+      "paid": false,
       "starred": false
     },
     {
@@ -249,7 +249,7 @@
       "url": "https://console.firebase.google.com/u/0/",
       "type": "code",
       "description": "Backend platform for apps",
-      "paid": true,
+      "paid": false,
       "starred": false
     },
     {
@@ -258,7 +258,7 @@
       "url": "https://bitbucket.org/240highland/workspace/overview/",
       "type": "code",
       "description": "Backup code repo",
-      "paid": true,
+      "paid": false,
       "starred": false
     },
     {
@@ -267,7 +267,7 @@
       "url": "https://www.instagram.com/darecountymusic/#",
       "type": "social",
       "description": "@darecountymusic",
-      "paid": true,
+      "paid": false,
       "starred": false
     },
     {
@@ -276,7 +276,7 @@
       "url": "https://www.instagram.com/joshpending/",
       "type": "social",
       "description": "@joshpending",
-      "paid": true,
+      "paid": false,
       "starred": false
     },
     {
@@ -303,7 +303,7 @@
       "url": "https://react.dev/learn",
       "type": "code",
       "description": "React documentation",
-      "paid": true,
+      "paid": false,
       "starred": false
     },
     {
@@ -312,7 +312,7 @@
       "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       "type": "code",
       "description": "Web and code documentation",
-      "paid": true,
+      "paid": false,
       "starred": false
     },
     {
@@ -321,7 +321,7 @@
       "url": "https://cloud.mongodb.com/v2/6648d7fcade1be70b26fc79c#/overview",
       "type": "code",
       "description": "Backend databse",
-      "paid": true,
+      "paid": false,
       "starred": false
     },
     {
@@ -330,7 +330,7 @@
       "url": "https://hashnode.com/655b86dcc8bfa45f6b14299b/dashboard/posts",
       "type": "code",
       "description": "Blog for code phase finals",
-      "paid": true,
+      "paid": false,
       "starred": false
     },
     {
@@ -339,7 +339,7 @@
       "url": "https://web.postman.co/workspace/My-Workspace~a0da3a8d-dca5-4802-8902-f17ba5b41231/overview",
       "type": "code",
       "description": "REST API testing",
-      "paid": true,
+      "paid": false,
       "starred": false
     },
     {
@@ -348,7 +348,7 @@
       "url": "https://songdata.io/",
       "type": "music",
       "description": "Spotify links",
-      "paid": true,
+      "paid": false,
       "starred": false
     },
     {
@@ -357,7 +357,7 @@
       "url": "https://tunebat.com/Analyzer",
       "type": "music",
       "description": "Upload files",
-      "paid": true,
+      "paid": false,
       "starred": false
     },
     {
@@ -366,7 +366,7 @@
       "url": "https://huntr.co/track/boards/655b8a5a08cddd0429aed6cf/board",
       "type": "code",
       "description": "Jon application tracking",
-      "paid": true,
+      "paid": false,
       "starred": false
     },
     {
@@ -375,7 +375,7 @@
       "url": "chrome://settings/",
       "type": "settings",
       "description": "⚙",
-      "paid": true,
+      "paid": false,
       "starred": false
     },
     {
@@ -456,6 +456,33 @@
       "url": "https://sclouddownloader.net/",
       "type": "music",
       "description": "Download SC link to mp3",
+      "paid": false,
+      "starred": false
+    },
+    {
+      "id": "3318",
+      "title": "BetterPic",
+      "url": "https://www.betterpic.io/app/orders",
+      "type": "social",
+      "description": "AI photo editing",
+      "paid": true,
+      "starred": false
+    },
+    {
+      "id": "e60d",
+      "title": "HTML Viewer GitHub",
+      "url": "https://html-preview.github.io/",
+      "type": "code",
+      "description": "Paste github html url to view repo in browser",
+      "paid": false,
+      "starred": false
+    },
+    {
+      "id": "b333",
+      "title": "fiverr",
+      "url": "https://www.fiverr.com/",
+      "type": "social",
+      "description": "Freelander site for art and media",
       "paid": false,
       "starred": false
     }

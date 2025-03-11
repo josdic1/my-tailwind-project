@@ -24,6 +24,17 @@
 
 }
 
+/* Light green tint for starred items */
+.starred-row {
+  background-color: rgba(135, 175, 173, 0.2); /* Light version of #87afad */
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Slightly darker green on hover */
+.starred-row:hover {
+  background-color: rgba(135, 175, 173, 0.4);
+}
+
 
 
 .unstarred:hover {
